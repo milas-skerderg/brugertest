@@ -1,0 +1,198 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f8fc;
+    color: #333;
+}
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+/* Main Container */
+.main-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Psychologist Info */
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.div1 {
+    flex: 2;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.div2 {
+    flex: 1;
+    background-color: #2196F3;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-text, .icon-phone {
+    text-align: center;
+}
+
+.icon-text i, .icon-phone i {
+    font-size: 24px;
+}
+
+/* Calendar Styles */
+.calendar-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calendar-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.calendar div {
+    padding: 15px;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calendar div:hover {
+    background-color: #d4d4d4;
+}
+
+.selected-date {
+    background-color: #ff6347;
+    color: white;
+}
+
+.unavailable-date {
+    background-color: #e57373;
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Tabbed Section */
+.tabbed-section {
+    margin-top: 30px;
+}
+
+.tabs {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.tab-link {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-link:hover {
+    background-color: #ddd;
+}
+
+.tab-link.current {
+    background-color: #ff6347;
+    color: white;
+    border-color: #ddd;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.tab-content.current {
+    display: block;
+}
+
+/* Date Picker */
+.date-picker {
+    margin: 10px 0;
+}
+
+.date-picker input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Time Slot Buttons */
+.time-slot-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-slot-btn {
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.time-slot-btn:hover {
+    background-color: #388E3C;
+}

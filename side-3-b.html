@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AB Test - Version B (Psychologist Info + Tabs)</title>
+    <link rel="stylesheet" href="styles-alternative.css"> <!-- Link to the alternative stylesheet -->
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">My Logo</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="main-container">
+        <!-- Psychologist Info Section -->
+        <div class="row">
+            <div class="div1">
+                <h3>Meet Our Psychologist</h3>
+                <p>Dr. Jane Doe has over 20 years of experience in cognitive-behavioral therapy, focusing on stress management and personal growth. Her work is well-recognized in the field, and she is dedicated to providing empathetic and professional care to her clients.</p>
+                <div class="icons">
+                    <div class="icon-text">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>PhD in Psychology</p>
+                    </div>
+                    <div class="icon-phone">
+                        <i class="fas fa-phone"></i>
+                        <p>+123 456 789</p>
+                    </div>
+                </div>
+            </div>
+            <div class="div2">
+                <ul>
+                    <li><i class="fas fa-calendar-alt"></i> Monday: 09:00 - 12:00</li>
+                    <li><i class="fas fa-calendar-alt"></i> Wednesday: 14:00 - 17:00</li>
+                    <li><i class="fas fa-calendar-alt"></i> Friday: 10:00 - 13:00</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Booking Section with Tabs -->
+        <section class="booking-section">
+            <div class="calendar-wrapper">
+                <h3>Select a Date</h3>
+                <div class="calendar-container">
+                    <div class="calendar" id="calendar"></div>
+                </div>
+            </div>
+
+            <!-- Tabbed Interface for Location and Time Slots -->
+            <div class="tabbed-section">
+                <ul class="tabs">
+                    <li class="tab-link current" data-tab="map">Location Info</li>
+                    <li class="tab-link" data-tab="time">Available Time Slots</li>
+                </ul>
+
+                <div id="map" class="tab-content current">
+                    <h4>Location Information</h4>
+                    <div class="map-container">
+                        <div id="map-widget">
+                            <!-- Map Embed or Placeholder -->
+                        </div>
+                        <div class="location-details">
+                            <p><strong>Address:</strong> Random Street, Copenhagen</p>
+                            <p><strong>Open Hours:</strong> 9:00 AM - 4:00 PM</p>
+                            <p><strong>Contact:</strong> +123 456 7890</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="time" class="tab-content">
+                    <h4>Available Time Slots for <span id="selected-date-display">[Select a Date]</span></h4>
+                    <div class="time-slot-container">
+                        <div class="date-picker">
+                            <label for="date-picker-input">Choose a Date:</label>
+                            <input type="date" id="date-picker-input">
+                        </div>
+
+                        <button class="time-slot-btn">09:00 - 10:00</button>
+                        <button class="time-slot-btn">10:00 - 11:00</button>
+                        <button class="time-slot-btn">11:00 - 12:00</button>
+                        <!-- Additional slots can be added here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="testimonial-section">
+            <h3 class="section-header">What Our Clients Say</h3>
+            <div class="testimonial-cards">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <img src="profile1.jpg" class="profile-img" alt="Client 1">
+                    <blockquote>"Dr. Jane Doe changed my life! Highly recommended."</blockquote>
+                    <p class="reviewer-name">Client 1</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <img src="profile2.jpg" class="profile-img" alt="Client 2">
+                    <blockquote>"The care and expertise are top-notch. I felt very comfortable."</blockquote>
+                    <p class="reviewer-name">Client 2</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <img src="profile3.jpg" class="profile-img" alt="Client 3">
+                    <blockquote>"Dr. Doe's guidance helped me immensely."</blockquote>
+                    <p class="reviewer-name">Client 3</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Script for Tabs and Date Selection -->
+    <script src="app-alternative.js"></script>
+</body>
+</html>

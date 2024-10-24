@@ -1,0 +1,374 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+.navbar {
+    background-color: #2b2b2b; /* Darker navbar */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo a {
+    color: #f0a500; /* Accent color */
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+    color: #f0a500; /* Accent color on hover */
+}
+
+/* Main Container Styles */
+.main-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2b2b2b; /* Dark background for main container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.div1 {
+    flex: 2;
+    background-color: #3b3b3b; /* Slightly lighter gray */
+    color: white;
+    padding: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.div1 h3 {
+    margin-bottom: 10px;
+}
+
+.div1 p {
+    margin-bottom: 10px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.icon-text, .icon-phone {
+    text-align: center;
+}
+
+.icon-text i, .icon-phone i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.div2 {
+    flex: 1;
+    background-color: #3b3b3b; /* Slightly lighter gray */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.div2 ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.div2 li {
+    margin-bottom: 10px;
+}
+
+.div2 li i {
+    margin-right: 10px;
+}
+
+/* Calendar Box */
+.calendar-container {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #444; /* Darker border */
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0a500; /* Accent color for header */
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+}
+
+.calendar div {
+    text-align: center;
+    padding: 10px;
+    background-color: #3b3b3b; /* Darker gray for calendar */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calendar div:hover {
+    background-color: #555; /* Lighter gray on hover */
+}
+
+.active-date {
+    background-color: #f0a500; /* Accent color for active date */
+    color: white;
+}
+
+/* Map or Time Slot Box */
+.map-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.info-box {
+    margin-top: 20px;
+}
+
+.info-box p {
+    margin-bottom: 10px;
+}
+
+/* Time Slot Buttons */
+.time-slot-container {
+    display: none;
+    flex-direction: column;
+}
+
+.time-slot-btn {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #4CAF50; /* Earthy Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.time-slot-btn:hover {
+    background-color: #388E3C; /* Darker green on hover */
+}
+
+/* Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker modal background */
+}
+
+.modal-content {
+    background-color: #2b2b2b; /* Darker background for modal */
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: white; /* Change close button color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Testimonial Carousel Styling */
+.testimonial-carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    width: 100%;
+}
+
+.testimonial-card {
+    min-width: 100%;
+    display: none; /* Hide all slides initially */
+}
+
+.testimonial-card.active {
+    display: block; /* Show only the active slide */
+}
+
+.testimonial-content {
+    padding: 20px;
+    background-color: #3b3b3b; /* Dark background for testimonial card */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+blockquote {
+    font-size: 1rem;
+    font-style: italic;
+    color: #e0e0e0; /* Light text for blockquote */
+    margin: 10px 0;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: #f0a500; /* Accent color for reviewer name */
+}
+
+/* Carousel controls */
+.prev, .next {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #555;
+}
+
+/* Calendar Styles */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.date-btn {
+    padding: 15px;
+    background-color: #3b3b3b; /* Dark button for dates */
+    border: 2px solid #444; /* Darker border */
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.date-btn:hover {
+    background-color: #555; /* Lighter gray on hover */
+}
+
+/* Additional styles for calendar navigation */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative; /* Allows positioning of arrows */
+}
+
+.calendar-header button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 5px;
+    color: #f0a500; /* Accent color for buttons */
+    transition: transform 0.2s;
+}
+
+.calendar-header button:hover {
+    transform: scale(1.1); /* Slight scaling on hover for effect */
+}
+
+/* Mark selected date */
+.selected-date {
+    background-color: #f0a500; /* Accent color for selected date */
+    color: white; /* Keep text color white for visibility */
+    font-weight: bold; /* Make text bold for emphasis */
+}
+
+/* Mark unavailable dates */
+.unavailable-date {
+    background-color: #FF6F61; /* Soft Red */
+    color: white;
+    cursor: not-allowed; /* Not clickable */
+}
